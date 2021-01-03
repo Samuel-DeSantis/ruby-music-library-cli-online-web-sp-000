@@ -61,7 +61,7 @@ class MusicLibraryController
 
   end
 
-  def play_songs
+  def play_song
 
   end
 end
