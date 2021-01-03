@@ -59,7 +59,7 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     my_artist = gets.strip
 
-    Song.all.each.with_index(1) { |s, i| puts "#{i}. "}
+    Artist.all.each.with_index(1) { |s, i| puts "#{i}. #{s.song}"}
   end
 
   def list_songs_by_genre
