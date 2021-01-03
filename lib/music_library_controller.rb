@@ -1,13 +1,13 @@
 class MusicControllerLibrary
 
   def intialize(path = './db/mp3s/')
-    obj = MusicImporter.new(path)
-    obj.import
+    MusicImporter.new(path).import
   end
 
   def call
-    status = true
+    input = ""
 
+    while input != "exit"
     puts "Welcome to your music library!"
     puts "To list all of your songs, enter 'list songs'."
     puts "To list all of the artists in your library, enter 'list artists'."
@@ -18,30 +18,45 @@ class MusicControllerLibrary
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
 
-    do
-      input = gets
+    input = gets.strip
 
-      case input
-      when 'list songs'
-
-      when 'list artists'
-
-      when 'list genres'
-
-      when 'list artist'
-
-      when 'list genre'
-
-      when 'play song'
-
-      when 'exit'
-
-      else
-
-      end
-
-    while(status)
-
+    case input
+    when 'list songs'
+      list_songs
+    when 'list artists'
+      list_artists
+    when 'list genres'
+      list_genres
+    when 'list artist'
+      list_songs_by_artists
+    when 'list genre'
+      list_songs_by_genre
+    when 'play song'
+      play_songs
+    end
   end
+end
+
+def list_songs
+
+end
+
+def list_artists
+
+end
+
+def list_genres
+
+end
+
+def list_songs_by_artists
+
+end
+
+def list_songs_by_genre
+
+end
+
+def play_songs
 
 end
