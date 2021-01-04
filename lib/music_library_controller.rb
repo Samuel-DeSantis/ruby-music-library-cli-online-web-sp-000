@@ -60,7 +60,7 @@ class MusicLibraryController
     my_artist = gets.strip
 
     if find_artist(my_artist) != nil
-      find_artist(my_artist)
+      find_artist(my_artist).songs.sort { |a, b| a.name <=> b.name }.each.with_index(1) { |s, i| puts "#{i}. #{s.name}"}
     end
   end
 
